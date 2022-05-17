@@ -1,0 +1,342 @@
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+    font-weight: 800;
+    user-select: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    box-sizing: border-box;
+    overflow-y: scroll;
+
+}
+
+
+
+.background{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+.page{
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: brightness(2);
+    animation: flash ease-out 6s infinite ;
+ }
+
+.screen-loading{
+    font-size: 40px; 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  
+   
+}
+
+.screen-loading::before{
+    content: "Wait a moment (I dit not own background video)";
+    position: relative;
+    top: 300px;
+    font-size: 15px;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    z-index: 2;
+    color:white;
+}
+
+.screen-loading::after{
+    content: "";
+    display: block;
+    position: relative;
+    left: 28%;
+    top: 25.5%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    z-index: 2;
+    background-color: white;
+    padding: 10px;
+    border-radius: 100px;
+    animation: fadeInOut 2s infinite;
+}
+
+.menu{
+    display: none;
+    position: relative;
+    z-index: 3;
+    color:white;
+    text-align: center;
+    top: 300px;
+    left:40%;
+    font-size: 20px;
+    width: 200px;
+    padding: 10px;
+    animation: flash ease-out 1s infinite;
+}
+
+.curtain{
+    display: none;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.c1{
+    background-color: black;
+    position: relative;
+    width: 100%;
+}
+.c2{
+    position: relative;
+    background-color: black;
+    width: 100%;
+}
+
+
+/* index end */
+
+
+
+ .hcurtain{
+    display: flex;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.me{
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    color: black;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.list-group{
+    padding: 50px;
+    list-style: none;
+}
+
+.list-group > a{
+    width: 150px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.navbar{
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+.introduction{
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.crow{
+    color: rgb(151, 0, 30);
+}
+.quote{
+    color:rgb(151, 0, 30);
+}
+
+.brand{
+    color:silver !important;
+    animation: flash 2s ease-in-out infinite;
+}
+
+.slick-container{
+    box-sizing: border-box;
+}
+.slick{
+    position: relative;
+    z-index: 3;
+    right: 0;
+    top: 100px;
+    --animate-duration:5s;
+}
+
+.skill-card{
+    width: 400px;
+    height: 230px;
+    margin: 10px;
+    padding: 10px;
+    background-color: grey;
+    font-size: 18px; 
+    opacity: 0.8;
+    border-radius: 10px;
+    transition: 3s;
+  
+    
+}
+
+.character-skill{
+    position: relative;
+    z-index: 3;
+    top: 100px;
+    color:silver;
+}
+
+
+
+.card{
+    background-color: grey;
+}
+
+span{
+    
+    animation: glow ease-in-out 3s infinite alternate;
+    
+}
+
+
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    border: 2px solid #7E76f9 !important;
+    border-radius: 50% !important;
+    margin: 10px;
+    list-style: none;
+}
+.slick-dots li button{
+    background-color: #7E76f9 !important;
+    display: none;
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.scard-header{
+    color: crimson  !important;
+}
+
+
+.spage{
+    display: block;
+    width: 100%;
+    height: 100%;
+ }
+
+.contact{
+    position: absolute;
+    z-index: 5;
+    width:490px;
+    height:300px;
+    left: 34%;
+    top:20%;
+    background-color: grey;
+    opacity: 0.6;
+    color: black !important;
+}
+
+.contact h1{
+    color: crimson;
+    animation: glow ease-in-out 1s infinite alternate;
+}
+
+.contact-texts{
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+    
+}
+
+.card-footer{
+    color: crimson;
+    animation: glow ease-in-out 1s infinite alternate;
+}
+
+@keyframes fadeInOut{
+    0%{
+        transform: scale(0);
+    }
+    35%{
+        transform: scale(0.2);
+    }
+    70%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+    
+}
+
+@keyframes flash{
+    from{
+        opacity: 0.9;
+    }
+    91%{
+        opacity: 0.4;
+    }
+    92%{
+        opacity: 1;
+    }
+    93%{
+        opacity: 0.3;
+    }
+    94%{
+        opacity: 0.6;
+    }
+    95%{
+        opacity: 0.3;
+    }
+    96%{
+        opacity:0.3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(68, 68, 68), 0 0 15px rgbrgb(65, 65, 65)
+      }
+      
+      to {
+        text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255);
+      }
+  }
+
+  @keyframes sglow {
+    from {
+        box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(68, 68, 68), 0 0 15px rgbrgb(65, 65, 65)
+      }
+      
+      to {
+        box-shadow: 0 0 5px rgb(192, 192, 192), 0 0 10px rgb(192, 192, 192), 0 0 15px rgb(192, 192, 192);
+      }
+  }
+
+
+ 
